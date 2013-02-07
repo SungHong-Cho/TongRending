@@ -7,17 +7,22 @@ gem 'rails', '3.2.11'
 
 gem 'mysql2'
 
-
+group :development, :test do
+  gem 'mysql2'
+end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
-
+ 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+  gem "therubyracer"
+  gem "less-rails"
+  gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 end
 
 gem 'jquery-rails'
@@ -31,6 +36,8 @@ gem 'jquery-rails'
 # Use unicorn as the app server
  gem 'unicorn'
 
+group :production do
+end
 # Deploy with Capistrano
 # gem 'capistrano'
 
